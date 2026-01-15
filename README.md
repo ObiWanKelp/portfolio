@@ -35,4 +35,5 @@ Live Site: https://obiwankelp.github.io/portfolio/
 - About – Introduction and focus areas  
 - Skills – Programming languages, tools, and platforms  
 - Projects – Clickable project cards with tech tags  
-- Contact – Email and LinkedIn links  
+- Contact – Email and LinkedIn links
+- Resume- Able to download a personal resume
