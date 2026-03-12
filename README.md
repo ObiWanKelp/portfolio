@@ -8,11 +8,11 @@ Live Site: https://obiwankelp.github.io/portfolio/
 
 ## Features
 
-- Animated star and shooting star background (pure CSS)
+- Animated star and shooting star background (pure CSSSSS)
 - Fixed glassmorphism navigation bar
 - Fully responsive design
-- Project cards with technology tags
-- Categorized skills section
+- Project cards with technology tagssss
+- Categorized skills sectionnnn
 - Contact section with email and LinkedIn
 - Keyboard accessibility and smooth scrolling
 - Deployed using GitHub Pages
