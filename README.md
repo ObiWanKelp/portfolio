@@ -1,8 +1,8 @@
-# Personal Portfolio Websiteegggdsssdghdjrrerwerwqds
+# Personal Portfolio Website
 
 A modern, responsive personal portfolio website built using HTML and CSS, featuring a glassmorphism UI, animated background, and smooth scrolling navigation.
 
-Live Site: https://obiwankelp.github.io/portfolio/
+Live Site: https://adityasinsinwar.vercel.app
 
 ---
 
