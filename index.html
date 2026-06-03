@@ -1,225 +1,226 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aditya's Portfolio</title>
+    <title>Aditya Sinsinwar — Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <div class="stars"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <nav class="links">
-      <a
-        href="https://www.linkedin.com/in/aditya-sinsinwar"
-        target="_blank"
-        rel="noopener noreferrer"
-        >LinkedIn</a
-      >
-      <a
-        href="https://github.com/ObiWanKelp"
-        target="_blank"
-        rel="noopener noreferrer"
-        >GitHub</a
-      >
-      <a
-        href="https://leetcode.com/u/obi-wan-kelp/"
-        target="_blank"
-        rel="noopener noreferrer"
-        >LeetCode</a
-      >
-      <a
-        href="https://codolio.com/profile/ObiWanKelp"
-        target="_blank"
-        rel="noopener noreferrer"
-        >CodeOlio</a
-      >
-      <a href="resume.pdf" target="_blank" class="resume-btn">Resume</a>
-      <a href="#contact">Contact</a>
+    <!-- Canvas for particle background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Custom cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="nav-logo">
+        <span class="logo-bracket">&lt;</span>AS<span class="logo-bracket"
+          >/&gt;</span
+        >
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="resume.pdf" target="_blank" class="nav-resume">Resume ↗</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
 
-    <header class="about">
-      <h1>Hi, I’m Aditya Sinsinwar</h1>
-      <p>
-        IT student passionate about building clean web interfaces and exploring
-        data-driven problem solving. Currently focused on HTML, CSS, JavaScript,
-        and Python, and actively working on projects to sharpen my full-stack
-        and data analysis skills.
-      </p>
-      <a href="#projects" class="cta">View my work →</a>
-    </header>
-
-    <section class="skills">
-      <h2>Skills</h2>
-
-      <div class="skill-group">
-        <h3>Languages</h3>
-        <ul class="skills-list">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>Python</li>
-          <li>C++</li>
-          <li>SQL</li>
-        </ul>
+    <!-- Hero Section -->
+    <section id="about" class="hero">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span id="dynamic-greeting">Hello, World!</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h1 class="hero-name">
+          <span class="name-line" data-text="Aditya">Aditya</span>
+          <span class="name-line accent" data-text="Sinsinwar">Sinsinwar</span>
+        </h1>
+        <div class="hero-role">
+          <span class="role-prefix">I build&nbsp;</span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="cursor-blink">_</span>
+        </div>
+        <p class="hero-bio" id="hero-bio">
+          IT student passionate about building clean web interfaces and
+          exploring data-driven problem solving. Currently focused on HTML, CSS,
+          JavaScript, and Python — actively crafting projects to sharpen
+          full-stack and data analysis skills.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary"
+            >View Projects <span class="btn-arrow">→</span></a
+          >
+          <a href="#contact" class="btn-ghost">Get in touch</a>
+        </div>
+        <div class="hero-socials">
+          <a
+            href="https://www.linkedin.com/in/aditya-sinsinwar"
+            target="_blank"
+            rel="noopener"
+            class="social-link"
+            >LI</a
+          >
+          <a
+            href="https://github.com/ObiWanKelp"
+            target="_blank"
+            rel="noopener"
+            class="social-link"
+            >GH</a
+          >
+          <a
+            href="https://leetcode.com/u/obi-wan-kelp/"
+            target="_blank"
+            rel="noopener"
+            class="social-link"
+            >LC</a
+          >
+          <a
+            href="https://codolio.com/profile/ObiWanKelp"
+            target="_blank"
+            rel="noopener"
+            class="social-link"
+            >CO</a
+          >
+        </div>
       </div>
-
-      <div class="skill-group">
-        <h3>Libraries & Frameworks</h3>
-        <ul class="skills-list">
-          <li>Pandas</li>
-          <li>Matplotlib</li>
-        </ul>
+      <div class="hero-visual">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="code-block floating">
+          <div class="code-header">
+            <span class="dot red"></span><span class="dot yellow"></span
+            ><span class="dot green"></span>
+            <span class="code-filename">about.js</span>
+          </div>
+          <pre
+            class="code-content"
+          ><code><span class="c-keyword">const</span> <span class="c-var">aditya</span> = {
+  <span class="c-prop">role</span>: <span class="c-string">"IT Student"</span>,
+  <span class="c-prop">focus</span>: [<span class="c-string">"Web Dev"</span>, <span class="c-string">"Data"</span>],
+  <span class="c-prop">languages</span>: [
+    <span class="c-string">"JavaScript"</span>,
+    <span class="c-string">"Python"</span>, <span class="c-string">"C++"</span>
+  ],
+  <span class="c-prop">openTo</span>: <span class="c-string">"Opportunities"</span> <span class="c-comment">✓</span>
+};</code></pre>
+        </div>
       </div>
-
-      <div class="skill-group">
-        <h3>Tools & Platforms</h3>
-        <ul class="skills-list">
-          <li>Git</li>
-          <li>GitHub</li>
-          <li>Tableau</li>
-        </ul>
-      </div>
-    </section>
-
-<section id="projects" class="projects">
-  <div class="projects-card">
-    <h2>Projects</h2>
-    <div class="proj-list">
-      <a
-        href="https://obiwankelp.github.io/portfolio/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="proj1"
-      >
-        <h3>Portfolio Website</h3>
-        <p>
-          Personal developer portfolio showcasing projects, skills, and contact
-          information, built with responsive design principles.
-        </p>
-        <div class="proj-tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-        </div>
-      </a>
-
-      <a
-        href="https://obiwankelp.github.io/Truly_Indian_1/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="proj1"
-      >
-        <h3>Truly Indian</h3>
-        <p>
-          Static website prototype focused on layout, styling, and basic
-          interactivity using core web technologies.
-        </p>
-        <div class="proj-tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-        </div>
-      </a>
-
-      <a
-        href="https://github.com/ObiWanKelp/ipl-stats"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="proj1"
-      >
-        <h3>IPL Management System</h3>
-        <p>
-          Database-driven web project designed for DBMS coursework, focusing on
-          data organization and CRUD operations.
-        </p>
-        <div class="proj-tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>DBMS</span>
-        </div>
-      </a>
-
-      <a
-        href="https://github.com/ObiWanKelp/CafeSales1"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="proj1"
-      >
-        <h3>Cafe Sales Analysis</h3>
-        <p>
-          Data cleaning and exploratory analysis on a 10,000+ row cafe sales
-          dataset to extract revenue and customer insights.
-        </p>
-        <div class="proj-tags">
-          <span>Python</span>
-          <span>Pandas</span>
-          <span>Matplotlib</span>
-          <span>Data Analysis</span>
-        </div>
-      </a>
-
-      <a
-        href="https://github.com/ObiWanKelp/Syntetic-Data-Analysis"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="proj1"
-      >
-        <h3>Synthetic User Data Cleaning</h3>
-        <p>
-          End-to-end data cleaning pipeline on a synthetic user dataset, handling
-          missing values, inconsistencies, and invalid entries using Pandas.
-        </p>
-        <div class="proj-tags">
-          <span>Python</span>
-          <span>Pandas</span>
-          <span>Data Cleaning</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-        </div>
+      <div class="scroll-hint">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
       </div>
     </section>
 
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p>
-        Feel free to reach out! I’m always open to opportunities and
-        collaboration.
-      </p>
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section reveal">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2 class="section-title">Skills</h2>
+      </div>
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Skills injected via JS from data.js -->
+      </div>
+    </section>
 
-      <div class="contact-links">
-        <a href="mailto:adityasinsinwar007@gmail.com"
-          >adityasinsinwar007@gmail.com</a
-        >
-        <a
-          href="https://www.linkedin.com/in/aditya-sinsinwar"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </a>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section reveal">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2 class="section-title">Projects</h2>
+      </div>
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="data">Data</button>
+        <button class="filter-btn" data-filter="db">Database</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Projects injected via JS from data.js -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section reveal">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2 class="section-title">Contact</h2>
+      </div>
+      <div class="contact-inner">
+        <div class="contact-text">
+          <h3 class="contact-heading">Let's build something together.</h3>
+          <p>
+            I'm always open to new opportunities, collaborations, or just a good
+            conversation about tech.
+          </p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:adityasinsinwar007@gmail.com" class="contact-item">
+            <span class="contact-icon">✉</span>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-value">adityasinsinwar007@gmail.com</span>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/aditya-sinsinwar"
+            target="_blank"
+            rel="noopener"
+            class="contact-item"
+          >
+            <span class="contact-icon">in</span>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">aditya-sinsinwar</span>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+          <a
+            href="https://github.com/ObiWanKelp"
+            target="_blank"
+            rel="noopener"
+            class="contact-item"
+          >
+            <span class="contact-icon">&lt;/&gt;</span>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">ObiWanKelp</span>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+        </div>
       </div>
     </section>
 
     <footer>
-      <p>Built with ❤️ using HTML & CSS</p>
-      <p>© 2025 Aditya Sinsinwar</p>
+      <div class="footer-inner">
+        <span class="footer-logo"
+          ><span class="logo-bracket">&lt;</span>AS<span class="logo-bracket"
+            >/&gt;</span
+          ></span
+        >
+        <span class="footer-copy">© 2025 Aditya Sinsinwar</span>
+        <a href="admin.html" class="footer-admin" title="Admin">⚙</a>
+      </div>
     </footer>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
