@@ -29,7 +29,7 @@ const PORTFOLIO_DATA = {
         "Personal developer portfolio showcasing projects, skills, and contact information, built with responsive design principles.",
       tags: ["HTML", "CSS", "JavaScript"],
       category: "web",
-      url: "https://obiwankelp.github.io/portfolio/",
+      url: "https://adityasinsinwar.vercel.app",
       featured: true,
     },
     {
